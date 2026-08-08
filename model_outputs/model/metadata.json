@@ -1,0 +1,9 @@
+{
+  "labels": [
+    "القضايا الحقوقية",
+    "قضايا الأحوال الشخصية",
+    "قضايا جنائية"
+  ],
+  "max_length": 256,
+  "base_model_name": "aubmindlab/bert-base-arabertv02"
+}
