@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muain</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <img class="site-header__logo" src="logo.png" alt="Muain logo" />
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="app-frame" aria-labelledby="appTitle">
+      <!--
+      <div class="language-bar">
+        <span class="language-label" data-i18n="languageLabel">Language</span>
+        <div class="language-switch" role="group" aria-label="Language selector">
+          <button type="button" class="lang-btn active" data-lang="en" lang="en" aria-pressed="true">English</button>
+          <button type="button" class="lang-btn" data-lang="ar" lang="ar" aria-pressed="false">العربية</button>
+        </div>
+      </div>
+      -->
+
+      <div class="card card--input">
+        <h1 id="appTitle" class="visually-hidden" data-i18n="title">معين</h1>
+        <p class="visually-hidden" data-i18n="subtitle">تصنيف القضايا وربطها بالسند الشرعي</p>
+
+        <label class="input-label" for="caseText" data-i18n="inputLabel">أدخل نص القضية</label>
+        <textarea id="caseText" rows="10" placeholder="اكتب نص القضية هنا..."
+          data-i18n-placeholder="casePlaceholder"></textarea>
+
+        <div class="action-row">
+          <button id="analyzeBtn" type="button" data-i18n="analyze">تحليل القضية</button>
+        </div>
+
+        <div id="loading" class="loading hidden" data-i18n="loading">جارٍ التحليل...</div>
+      </div>
+
+      <div id="errorBox" class="error hidden" role="alert"></div>
+
+      <div id="resultCard" class="card card--result hidden">
+        <h2 data-i18n="resultHeading">النتيجة</h2>
+        <p><strong data-i18n="predictedClassLabel">التصنيف المتوقع:</strong> <span id="predictedClass"></span></p>
+        <p><strong data-i18n="legalReferenceLabel">السند الشرعي:</strong> <span id="legalReference"></span></p>
+        <p><strong data-i18n="similarityScoreLabel">درجة التشابه:</strong> <span id="similarityScore"></span></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
